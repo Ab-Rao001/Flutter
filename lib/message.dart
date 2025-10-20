@@ -36,18 +36,20 @@ class MessagePage extends StatelessWidget {
               padding: const EdgeInsets.all(16),
               children: [
                 Card(
+                  color: Colors.white38,
                   child: ListTile(
                     title: const Text('You'),
                     subtitle: const Text('Is he still available for fostering?'),
-                    trailing: const Text('13:15', style: TextStyle(fontSize: 11, color: Colors.black45)),
+                    trailing: const Text('13:15', style: TextStyle(fontSize: 11, color: Colors.black)),
                   ),
                 ),
                 Card(
+                  color: Colors.blue,
                   child: ListTile(
                     leading: CircleAvatar(backgroundImage: NetworkImage(values.ownerpicture)),
-                    title: Text(values.ownername),
-                    subtitle: const Text("Yes! He's available. What made you interested?"),
-                    trailing: const Text('13:17', style: TextStyle(fontSize: 11, color: Colors.black45)),
+                    title: Text(values.ownername, style:  TextStyle(color: Colors.white),),
+                    subtitle:  Text("Yes! He's available. What made you interested?", style: TextStyle(color: Colors.white),),
+                    trailing:  Text('13:17', style: TextStyle(fontSize: 11, color: Colors.white)),
                   ),
                 ),
               ],
@@ -63,7 +65,7 @@ class MessagePage extends StatelessWidget {
                     decoration: InputDecoration(
                       hintText: 'Type a message',
                       filled: true,
-                      fillColor: Colors.grey[200],
+                      fillColor: Colors.grey[350],
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20),
                         borderSide: BorderSide.none,
@@ -73,7 +75,14 @@ class MessagePage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 8),
-                IconButton(onPressed: () {}, icon: const Icon(Icons.send)),
+                IconButton(onPressed: () {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text('Message sent!'),
+                      backgroundColor: Colors.red,
+                    ),
+                  );
+                }, icon: const Icon(Icons.send)),
               ],
             ),
           )

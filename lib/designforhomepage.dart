@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'Values.dart';
 import 'Detailpage.dart';
 import 'message.dart';
+import 'Homepage.dart';
 
 class DesignHomeCard extends StatelessWidget {
   final Values values;
@@ -38,8 +40,8 @@ class DesignHomeCard extends StatelessWidget {
                         children: [
                           Text(
                             values.name,
-                            style: const TextStyle(
-                              fontSize: 16,
+                            style: GoogleFonts.baskervvilleSc(
+                              fontSize: 18,
                               fontWeight: FontWeight.bold,
                             ),
                           ),

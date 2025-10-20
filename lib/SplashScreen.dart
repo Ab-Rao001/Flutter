@@ -38,7 +38,6 @@ class _SplashScreenState extends State<SplashScreen>
 
     _controller.forward();
 
-    // Optional: navigate after 4 seconds
     Future.delayed(const Duration(seconds: 4), () {
       if (mounted) {
         Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => const Onboardingscreen(),));

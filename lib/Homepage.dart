@@ -1,7 +1,7 @@
 import 'package:assignment2by150/designforhomepage.dart';
 import 'package:assignment2by150/Values.dart';
-import 'package:assignment2by150/designforhomepage.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 
 var values = [
@@ -167,10 +167,10 @@ class Homepage extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
+              children:  [
                 Text(
                   'Rao Abdul Rehman',
-                  style: TextStyle(
+                  style: GoogleFonts.aboreto(
                     fontWeight: FontWeight.w600,
                     fontSize: 16,
                     color: Colors.black,
@@ -180,14 +180,15 @@ class Homepage extends StatelessWidget {
                   children: [
                     Text(
                       'Foster Parent',
-                      style: TextStyle(
+                      style: GoogleFonts.almendraDisplay(
                         fontSize: 13,
-                        color: Colors.blue,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
                       ),
                     ),
                     Icon(
                       Icons.keyboard_arrow_down,
-                      color: Colors.blue,
+                      color: Colors.white,
                       size: 16,
                     ),
                   ],
